@@ -12,11 +12,18 @@
  * limitations under the License.
  */
 
-namespace org.example.todo
+'use strict';
 
-asset TodoItem identified by id {
-  o String id
-  o String title
-  o Boolean completed default=false
+const composerSteps = require('composer-cucumber-steps');
+const cucumber = require('cucumber');
+
+module.exports = function () {
+    composerSteps.call(this);
+};
+
+if (cucumber.defineSupportCode) {
+    cucumber.defineSupportCode((context) => {
+        module.exports.call(context);
+    });
 }
 
