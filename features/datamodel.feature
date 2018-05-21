@@ -8,7 +8,7 @@ Feature: Basic data model
             | id | title      | completed |
             | 1  | Lots to do | true      |
         Then I should have the following assets of type org.example.todo.TodoItem
-	    | id | title      | completed |
+            | id | title      | completed |
             | 1  | Lots to do | true      |
 
     Scenario: Valid Todo items can be added with optional fields omitted
